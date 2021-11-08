@@ -242,14 +242,49 @@ namespace ConsoleApp1
             }
 
             // перебор с помощью цикла for
-            for ( i = 0; i < numbers.Length; i++)
+            for (i = 0; i < numbers.Length; i++)
             {
-                for ( j = 0; j < numbers[i].Length; j++)
+                for (j = 0; j < numbers[i].Length; j++)
                 {
                     Console.Write($"{numbers[i][j]} \t");
                 }
                 Console.WriteLine();
             }
+
+            // зубчатый массив вещественных
+
+            var numbers23 = new [] {
+                 new float[2] ,
+                 new float[3] ,
+                 new float[5] 
+            };
+
+            float kjk = 0;
+            Console.WriteLine( $"значение длины{numbers23.Length}");
+            int lolka = numbers23[1].Length;
+            Console.WriteLine($"значение длины{numbers23[2].Length}");
+
+            for (i = 0; i < numbers23.Length; i++)
+            {
+                for (j = 0; j < numbers23[i].Length; j++)
+                {
+                    
+                    kjk = Convert.ToSingle(Console.ReadLine());
+                    numbers23[i][j]= kjk;
+                }
+                Console.WriteLine();
+            }
+
+            foreach (var row in numbers23)
+            {
+                foreach (float number23 in row)
+                {
+                    Console.Write($"{number23} \t");
+                }
+                Console.WriteLine();
+            }
+
+
 
             //неявно тип пер для хванения массива и строк
             var masiv = numbers;
@@ -371,14 +406,7 @@ namespace ConsoleApp1
             Compare2(g);
 
 
-
-
-
-
-
-
-
-
+            
 
         }
 
